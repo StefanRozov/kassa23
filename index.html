@@ -222,6 +222,88 @@
     }
   }
   html { scroll-behavior: smooth; }
+  .kkt-registration {
+    background: #f6f9fe;
+    color: #222;
+    padding: 60px 0;
+}
+.kkt-registration h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 48px;
+}
+.kkt-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 36px;
+}
+.kkt-step {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(33,118,255,0.10);
+    padding: 38px 30px 32px 30px;
+    width: 330px;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.8s cubic-bezier(.6,.2,.1,1), transform 0.8s cubic-bezier(.6,.2,.1,1);
+}
+.kkt-step.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.kkt-step-num {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background: #2176ff;
+    color: #fff;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 8px rgba(33,118,255,0.12);
+}
+.kkt-step-icon {
+    margin: 0 auto 18px auto;
+    width: 56px;
+    height: 56px;
+    background: #eaf1fb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    animation: pulse 1.8s infinite;
+}
+.kkt-step:nth-child(2) .kkt-step-icon { animation-delay: 0.5s; }
+.kkt-step:nth-child(3) .kkt-step-icon { animation-delay: 1s; }
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(33,118,255,0.08);}
+    70% { box-shadow: 0 0 0 14px rgba(33,118,255,0);}
+    100% { box-shadow: 0 0 0 0 rgba(33,118,255,0.08);}
+}
+.kkt-step h3 {
+    margin-bottom: 13px;
+    font-size: 1.16rem;
+    font-weight: 600;
+}
+.kkt-step p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+@media (max-width: 1100px) {
+    .kkt-steps { flex-direction: column; align-items: center; }
+    .kkt-step { width: 90%; max-width: 400px; }
+}
 </style>
 </head>
 <body>
@@ -254,13 +336,12 @@
 </section>
 
 <section class="catalog" id="catalog">
-  <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 30px; font-weight: 700; ">
+  <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 30px; font-weight: 700; color: #222; ">
     Цены на Онлайн Кассы "под Ключ"
   </h2>
   <div class="products" id="productsList">
     <div class="product-card visible">
       <h3>Экономичный Вариант № 1:</h3>
-      <img src="https://via.placeholder.com/150" alt="Экономичный Вариант № 1">
       <p><strong>21.200 РУБ.</strong></p>
       <ul style="list-style-type:none; padding-left: 0;">
         <li>"Автономная" Онлайн касса.</li>
@@ -272,7 +353,6 @@
 
     <div class="product-card visible">
       <h3>Вариант Оптимальный №1:</h3>
-      <img src="https://pos-center.ru/img/prod/m/2/e/8/2e86ae9dae10bfd470ccc303c27fc472.jpg" alt="Вариант Оптимальный №1">
       <p><strong>31.700 РУБ.</strong></p>
       <ul style="list-style-type:none; padding-left: 0;">
         <li>Смарт-терминал.</li>
@@ -284,7 +364,6 @@
 
     <div class="product-card visible">
       <h3>Вариант с Фискальным регистратором:</h3>
-      <img src="https://pos-center.ru/img/prod/m/d/a/b/dab853384a1ec7775f2f13d9875f4ab1.jpg" alt="Вариант с Фискальным регистратором">
       <p><strong>27.550 руб.</strong></p>
       <ul style="list-style-type:none; padding-left: 0;">
         <li>Фискальный регистратор.</li>
@@ -296,7 +375,6 @@
 
     <div class="product-card visible">
       <h3>Экономичный Вариант № 2:</h3>
-      <img src="https://via.placeholder.com/150" alt="Экономичный Вариант № 2">
       <p><strong>22.800 РУБ.</strong></p>
       <ul style="list-style-type:none; padding-left: 0;">
         <li>"Автономная" Онлайн касса.</li>
@@ -308,7 +386,6 @@
 
     <div class="product-card visible">
       <h3>Вариант Оптимальный №2:</h3>
-      <img src="https://via.placeholder.com/150" alt="Вариант Оптимальный №2">
       <p><strong>34.700 РУБ.</strong></p>
       <ul style="list-style-type:none; padding-left: 0;">
         <li>Смарт-терминал.</li>
@@ -320,7 +397,6 @@
 
     <div class="product-card visible">
       <h3>Вариант с Фискальным регистратором №2:</h3>
-      <img src="https://via.placeholder.com/150" alt="Вариант с Фискальным регистратором №2">
       <p><strong>31.500 руб.</strong></p>
       <ul style="list-style-type:none; padding-left: 0;">
         <li>POS-терминал + ФР.</li>
@@ -331,6 +407,406 @@
     </div>
   </div>
 </section>
+<section class="kkt-registration" id="kkt-registration" style="background:#f6f9fe; color:#222; padding:60px 0;">
+  <h2 style="text-align:center; font-size:2.2rem; font-weight:700; margin-bottom:48px;">
+    Как проходит регистрация Кассы в налоговой?
+  </h2>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:36px;">
+    <!-- Шаг 1 -->
+    <div style="background:#fff; border-radius:18px; box-shadow:0 6px 24px rgba(33,118,255,0.10); padding:38px 30px 32px 30px; width:330px; text-align:center; position:relative;">
+      <div style="position:absolute; left:20px; top:20px; background:#2176ff; color:#fff; border-radius:50%; width:38px; height:38px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.2rem; box-shadow:0 2px 8px rgba(33,118,255,0.12);">
+        1
+      </div>
+      <div style="margin:0 auto 18px auto; width:56px; height:56px; background:#eaf1fb; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem;">
+        👁️
+      </div>
+      <h3 style="margin-bottom:13px; font-size:1.16rem; font-weight:600;">Вы обращаетесь к нам</h3>
+      <p style="font-size:1rem; line-height:1.6; color:#555;">
+        Согласовываем условия, собираем документы, подписываем договор.
+      </p>
+    </div>
+    <!-- Шаг 2 -->
+    <div style="background:#fff; border-radius:18px; box-shadow:0 6px 24px rgba(33,118,255,0.10); padding:38px 30px 32px 30px; width:330px; text-align:center; position:relative;">
+      <div style="position:absolute; left:20px; top:20px; background:#2176ff; color:#fff; border-radius:50%; width:38px; height:38px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.2rem; box-shadow:0 2px 8px rgba(33,118,255,0.12);">
+        2
+      </div>
+      <div style="margin:0 auto 18px auto; width:56px; height:56px; background:#eaf1fb; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem;">
+        📝
+      </div>
+      <h3 style="margin-bottom:13px; font-size:1.16rem; font-weight:600;">Регистрация ККТ в ФНС и ОФД</h3>
+      <p style="font-size:1rem; line-height:1.6; color:#555;">
+        Мы готовим документы, проходим все процедуры и регистрируем кассу по 54-ФЗ.
+      </p>
+    </div>
+    <!-- Шаг 3 -->
+    <div style="background:#fff; border-radius:18px; box-shadow:0 6px 24px rgba(33,118,255,0.10); padding:38px 30px 32px 30px; width:330px; text-align:center; position:relative;">
+      <div style="position:absolute; left:20px; top:20px; background:#2176ff; color:#fff; border-radius:50%; width:38px; height:38px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.2rem; box-shadow:0 2px 8px rgba(33,118,255,0.12);">
+        3
+      </div>
+      <div style="margin:0 auto 18px auto; width:56px; height:56px; background:#eaf1fb; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem;">
+        ✔️
+      </div>
+      <h3 style="margin-bottom:13px; font-size:1.16rem; font-weight:600;">Готово!</h3>
+      <p style="font-size:1rem; line-height:1.6; color:#555;">
+        Сообщаем о готовности — забираете кассу и начинаете работать.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="our-team" style="background:#f6f9fe; color:#222; padding:60px 0;">
+  <h2 style="text-align:center; font-size:2.2rem; font-weight:700; margin-bottom:48px;">
+    Наша команда заботится о своих клиентах
+  </h2>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:36px;">
+    <!-- Регистрация -->
+    <div style="background:#fff; border-radius:18px; box-shadow:0 6px 24px rgba(33,118,255,0.10); padding:38px 30px 32px 30px; width:330px; text-align:center; position:relative;">
+      <div style="margin:0 auto 18px auto; width:80px; height:80px; background:#eaf1fb; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2.5rem; color:#2176ff;">
+        🔑
+      </div>
+      <h3 style="margin-bottom:13px; font-size:1.16rem; font-weight:600;">Регистрация</h3>
+      <p style="font-size:1rem; line-height:1.6; color:#555;">
+        С самого начала нашей с Вами работы, мы поможем определиться в выборе. Покупая у нас, Вы приобретаете гарантию исполнения наших обещаний.
+      </p>
+    </div>
+    <!-- Сопровождение -->
+    <div style="background:#fff; border-radius:18px; box-shadow:0 6px 24px rgba(33,118,255,0.10); padding:38px 30px 32px 30px; width:330px; text-align:center; position:relative;">
+      <div style="margin:0 auto 18px auto; width:80px; height:80px; background:#eaf1fb; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2.5rem; color:#2176ff;">
+        🤝
+      </div>
+      <h3 style="margin-bottom:13px; font-size:1.16rem; font-weight:600;">Сопровождение</h3>
+      <p style="font-size:1rem; line-height:1.6; color:#555;">
+        Во время работы возникают различные вопросы. Мы на них ответим. В любой момент Вы можете рассчитывать на поддержку, консультацию и помощь специалистов.
+      </p>
+    </div>
+    <!-- Помощь -->
+    <div style="background:#fff; border-radius:18px; box-shadow:0 6px 24px rgba(33,118,255,0.10); padding:38px 30px 32px 30px; width:330px; text-align:center; position:relative;">
+      <div style="margin:0 auto 18px auto; width:80px; height:80px; background:#eaf1fb; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2.5rem; color:#2176ff;">
+        🛠️
+      </div>
+      <h3 style="margin-bottom:13px; font-size:1.16rem; font-weight:600;">Помощь</h3>
+      <p style="font-size:1rem; line-height:1.6; color:#555;">
+        Мы заинтересованы, чтоб Ваш бизнес развивался, заботимся о вас и вашем оборудовании.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="our-team" style="background:#f6f9fe; color:#222; padding:60px 0;">
+  <h2 style="text-align:center; font-size:2.2rem; font-weight:700; margin-bottom:48px;">
+    У нас работают только специалисты
+  </h2>
+  <p style="text-align:center; max-width:800px; margin:0 auto 40px; font-size:1.2rem; line-height:1.6;">
+    Каждый из нас прошёл свой путь, приобретая опыт и расширяя границы знаний. Мы готовы применять потенциальные возможности, для достижения наших общих интересов.
+  </p>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:36px;">
+    <!-- Специалист 1 -->
+    <div style="background:#fff; border-radius:18px; box-shadow:0 6px 24px rgba(33,118,255,0.10); padding:38px 30px 32px 30px; width:330px; text-align:center; position:relative;">
+      <div style="margin:0 auto 18px auto; width:80px; height:80px; background:#eaf1fb; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2.5rem; color:#2176ff;">
+        👨‍💼
+      </div>
+      <h3 style="margin-bottom:13px; font-size:1.16rem; font-weight:600;">Иван Иванов</h3>
+      <p style="font-size:1rem; line-height:1.6; color:#555;">
+        Опыт работы более 10 лет в области регистрации ККТ.
+      </p>
+    </div>
+    <!-- Специалист 2 -->
+    <div style="background:#fff; border-radius:18px; box-shadow:0 6px 24px rgba(33,118,255,0.10); padding:38px 30px 32px 30px; width:330px; text-align:center; position:relative;">
+      <div style="margin:0 auto 18px auto; width:80px; height:80px; background:#eaf1fb; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2.5rem; color:#2176ff;">
+        👩‍💼
+      </div>
+      <h3 style="margin-bottom:13px; font-size:1.16rem; font-weight:600;">Мария Петрова</h3>
+      <p style="font-size:1rem; line-height:1.6; color:#555;">
+        Специалист по налоговому учету и регистрации ККТ.
+      </p>
+    </div>
+    <!-- Специалист 3 -->
+    <div style="background:#fff; border-radius:18px; box-shadow:0 6px 24px rgba(33,118,255,0.10); padding:38px 30px 32px 30px; width:330px; text-align:center; position:relative;">
+      <div style="margin:0 auto 18px auto; width:80px; height:80px; background:#eaf1fb; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2.5rem; color:#2176ff;">
+        👨‍💼
+      </div>
+      <h3 style="margin-bottom:13px; font-size:1.16rem; font-weight:600;">Алексей Сидоров</h3>
+      <p style="font-size:1rem; line-height:1.6; color:#555;">
+        Эксперт по интеграции ККТ с торговыми системами.
+      </p>
+    </div>
+  </div>
+</section>
+<section id="services" style="background-color: #f6f9fe; padding: 60px 20px; font-family: Arial, sans-serif;">
+  <style>
+    #services h2 {
+      text-align: center;
+      font-size: 2em;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    #services p.description {
+      text-align: center;
+      color: #666;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      font-size: 1em;
+      line-height: 1.5;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .service-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 250px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      font-size: 1.2em;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 0.95em;
+      color: #555;
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 768px) {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+
+  <h2>Наши услуги:</h2>
+  <p class="description">
+    Мы продаём и обслуживаем Онлайн кассы, Оборудование для Автоматизации (Сканеры Штрих кода 1D и 2D, Принтеры этикеток, Весы и иную Периферию).<br>
+    Программы учёта.<br>
+    Комплектующие и прочее.<br><br>
+    Оказываем услуги по ремонту Компьютерной техники.<br>
+    Программируем ключи для Домофонов и Сигнализации.
+  </p>
+
+  <div class="card-container">
+    <div class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Онлайн кассы" />
+      <h3>Онлайн кассы и Автоматизация</h3>
+      <p>Онлайн кассы</p>
+      <p>Оборудование для автоматизации</p>
+      <p>Программное обеспечение</p>
+      <p>Наличие и под заказ</p>
+    </div>
+
+    <div class="service-card">
+      <img src="https://img.icons8.com/ios-filled/100/000000/laptop-settings.png" alt="Компьютерные услуги" />
+
+      <h3>Компьютерные услуги</h3>
+      <p>Программный и модульный</p>
+      <p>ремонт Компьютеров и</p>
+      <p>ноутбуков.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" alt="Ключи для домофонов" />
+      <h3>Ключи для домофонов</h3>
+      <p>Программируем ключи:</p>
+      <p>Dallas</p>
+      <p>Cyfral</p>
+      <p>Метаком</p>
+      <p>RFID</p>
+    </div>
+  </div>
+</section>
+
+<section id="partners" style="background-color: #f6f9fe; padding: 60px 20px; font-family: Arial, sans-serif;">
+  <style>
+    #partners h2 {
+      text-align: center;
+      font-size: 2em;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    #partners p {
+      text-align: center;
+      color: #666;
+      font-size: 1em;
+      margin-bottom: 40px;
+    }
+
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      max-width: 800px;
+      margin: 0 auto;
+      justify-items: center;
+    }
+
+    .partner-card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 120px;
+      width: 120px;
+    }
+
+    .partner-card img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 400px) {
+      .partners-grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  </style>
+
+  <h2>Наши партнёры:</h2>
+  <p>Мы постоянно работаем над заключением новых партнёрских отношений.</p>
+
+  <div class="partners-grid">
+    <div class="partner-card"><img src="images/2800694108.jpg" alt="Эвотор"></div>
+    <div class="partner-card"><img src="images/6076805370.jpg" alt="ОФД"></div>
+    <div class="partner-card"><img src="images/6891543490.jpg" alt="Дримкас"></div>
+    <div class="partner-card"><img src="images/7445278971.jpg" alt="Taxcom"></div>
+    <div class="partner-card"><img src="images/7477080196.jpg" alt="Инфо предприятие"></div>
+    <div class="partner-card"><img src="images/7890543887.jpg" alt="OFD.ru"></div>
+    <div class="partner-card"><img src="images/8763468194.jpg" alt="Инкотекс"></div>
+    <div class="partner-card"><img src="images/9360808431.jpg" alt="Партнёр"></div>
+  </div>
+</section>
+
+
+
+<section id="contacts" style="background-color: #f6f9fe; padding: 60px 20px; font-family: Arial, sans-serif;">
+  <style>
+    #contacts h2 {
+      text-align: center;
+      font-size: 2em;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .contacts-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    .contact-info {
+      max-width: 400px;
+      font-size: 1em;
+      color: #444;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+    }
+
+    .contact-info a {
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-icons {
+      margin-top: 20px;
+    }
+
+    .contact-icons a {
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    .contact-icons img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .map-container iframe {
+      width: 320px;
+      height: 220px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .contacts-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+
+  <h2>Наши контакты:</h2>
+  <div class="contacts-wrapper">
+    <div class="contact-info">
+      <p><strong>Фактический адрес:</strong></p>
+      <p>352630, Россия, Белореченск, ул. Кирова 7.</p>
+
+      <p><strong>Мобильный телефон/WhatsApp и E-mail:</strong></p>
+      <p>📞 <a href="tel:+79184333122">+7(918)4-333-122</a></p>
+      <p>📧 <a href="mailto:kassa23@kass23.ru">kassa23@kass23.ru</a></p>
+
+      <div class="contact-icons">
+        <a href="https://wa.me/79184333122" target="_blank" title="WhatsApp">
+          <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+        </a>
+        <a href="https://vk.com" target="_blank" title="ВКонтакте">
+          <img src="https://img.icons8.com/color/48/000000/vk-com.png" alt="VK" />
+        </a>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9b9c570a3f582c49c7f7e3a27c957168e6240f91b0388c1dc92729c8d81b4b7c&amp;source=constructor" width="320" height="220" frameborder="0"></iframe>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
 
 <footer>
   &copy; 2025 Касса23. Все права защищены.
@@ -355,6 +831,21 @@
   });
 
   
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.kkt-step').forEach(step => {
+    observer.observe(step);
+  });
+
+        
+
 </script>
 
 </body>
