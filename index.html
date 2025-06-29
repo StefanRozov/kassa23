@@ -157,9 +157,7 @@
   .product-card.visible {
     display: block;
   }
-  .product-card:hover {
-    box-shadow: 0 8px 20px rgb(33 118 255 / 0.3);
-  }
+
   .product-card img {
     width: 100%;
     height: 180px;
@@ -326,7 +324,7 @@
   <div class="feature">
     <img src="https://img.icons8.com/ios-filled/100/2176ff/speed.png" alt="Скорость" />
     <h3>Скорость</h3>
-    <p>Молниеносная обработка транзакций без задержек.</p>
+    <p>Быстрая обработка заявок без задержек</p>
   </div>
   <div class="feature">
     <img src="https://img.icons8.com/ios-filled/100/2176ff/customer-support.png" alt="Поддержка" />
@@ -336,13 +334,25 @@
 </section>
 
 <section class="catalog" id="catalog">
-  <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 30px; font-weight: 700; color: #222; ">
+  <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 30px; font-weight: 700; color: #222;">
     Цены на Онлайн Кассы "под Ключ"
   </h2>
   <div class="products" id="productsList">
+
     <div class="product-card visible">
       <h3>Экономичный Вариант № 1:</h3>
-      <p><strong>21.200 РУБ.</strong></p>
+      <p><strong>26.700 РУБ.</strong></p>
+      <ul style="list-style-type:none; padding-left: 0;">
+        <li>"Автономная" Онлайн касса.</li>
+        <li>ФН 15 месяцев.</li>
+        <li>ОФД на 15 месяцев.</li>
+        <li>Услуги регистрации.</li>
+      </ul>
+    </div>
+
+    <div class="product-card visible">
+      <h3>Экономичный Вариант № 2:</h3>
+      <p><strong>29.200 РУБ.</strong></p>
       <ul style="list-style-type:none; padding-left: 0;">
         <li>"Автономная" Онлайн касса.</li>
         <li>ФН 15 месяцев.</li>
@@ -353,7 +363,18 @@
 
     <div class="product-card visible">
       <h3>Вариант Оптимальный №1:</h3>
-      <p><strong>31.700 РУБ.</strong></p>
+      <p><strong>44.200 РУБ.</strong></p>
+      <ul style="list-style-type:none; padding-left: 0;">
+        <li>Смарт-терминал.</li>
+        <li>ФН 15 месяцев.</li>
+        <li>ОФД на 15 месяцев.</li>
+        <li>Услуги регистрации.</li>
+      </ul>
+    </div>
+
+    <div class="product-card visible">
+      <h3>Вариант Оптимальный №2:</h3>
+      <p><strong>49.200 РУБ.</strong></p>
       <ul style="list-style-type:none; padding-left: 0;">
         <li>Смарт-терминал.</li>
         <li>ФН 15 месяцев.</li>
@@ -364,7 +385,7 @@
 
     <div class="product-card visible">
       <h3>Вариант с Фискальным регистратором:</h3>
-      <p><strong>27.550 руб.</strong></p>
+      <p><strong>34.200 руб.</strong></p>
       <ul style="list-style-type:none; padding-left: 0;">
         <li>Фискальный регистратор.</li>
         <li>ФН 15 месяцев.</li>
@@ -374,30 +395,8 @@
     </div>
 
     <div class="product-card visible">
-      <h3>Экономичный Вариант № 2:</h3>
-      <p><strong>22.800 РУБ.</strong></p>
-      <ul style="list-style-type:none; padding-left: 0;">
-        <li>"Автономная" Онлайн касса.</li>
-        <li>ФН 15 месяцев.</li>
-        <li>ОФД на 15 месяцев.</li>
-        <li>Услуги регистрации.</li>
-      </ul>
-    </div>
-
-    <div class="product-card visible">
-      <h3>Вариант Оптимальный №2:</h3>
-      <p><strong>34.700 РУБ.</strong></p>
-      <ul style="list-style-type:none; padding-left: 0;">
-        <li>Смарт-терминал.</li>
-        <li>ФН 15 месяцев.</li>
-        <li>ОФД на 15 месяцев.</li>
-        <li>Услуги регистрации.</li>
-      </ul>
-    </div>
-
-    <div class="product-card visible">
       <h3>Вариант с Фискальным регистратором №2:</h3>
-      <p><strong>31.500 руб.</strong></p>
+      <p><strong>94.000 руб.</strong></p>
       <ul style="list-style-type:none; padding-left: 0;">
         <li>POS-терминал + ФР.</li>
         <li>ФН 15 месяцев.</li>
@@ -407,6 +406,7 @@
     </div>
   </div>
 </section>
+
 <section class="kkt-registration" id="kkt-registration" style="background:#f6f9fe; color:#222; padding:60px 0;">
   <h2 style="text-align:center; font-size:2.2rem; font-weight:700; margin-bottom:48px;">
     Как проходит регистрация Кассы в налоговой?
@@ -505,7 +505,7 @@
       <div style="margin:0 auto 18px auto; width:80px; height:80px; background:#eaf1fb; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2.5rem; color:#2176ff;">
         👨‍💼
       </div>
-      <h3 style="margin-bottom:13px; font-size:1.16rem; font-weight:600;">Иван Иванов</h3>
+      <h3 style="margin-bottom:13px; font-size:1.16rem; font-weight:600;">Василий</h3>
       <p style="font-size:1rem; line-height:1.6; color:#555;">
         Опыт работы более 10 лет в области регистрации ККТ.
       </p>
@@ -513,9 +513,9 @@
     <!-- Специалист 2 -->
     <div style="background:#fff; border-radius:18px; box-shadow:0 6px 24px rgba(33,118,255,0.10); padding:38px 30px 32px 30px; width:330px; text-align:center; position:relative;">
       <div style="margin:0 auto 18px auto; width:80px; height:80px; background:#eaf1fb; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2.5rem; color:#2176ff;">
-        👩‍💼
+       👨‍💼
       </div>
-      <h3 style="margin-bottom:13px; font-size:1.16rem; font-weight:600;">Мария Петрова</h3>
+      <h3 style="margin-bottom:13px; font-size:1.16rem; font-weight:600;">Алексей</h3>
       <p style="font-size:1rem; line-height:1.6; color:#555;">
         Специалист по налоговому учету и регистрации ККТ.
       </p>
@@ -525,7 +525,7 @@
       <div style="margin:0 auto 18px auto; width:80px; height:80px; background:#eaf1fb; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2.5rem; color:#2176ff;">
         👨‍💼
       </div>
-      <h3 style="margin-bottom:13px; font-size:1.16rem; font-weight:600;">Алексей Сидоров</h3>
+      <h3 style="margin-bottom:13px; font-size:1.16rem; font-weight:600;">Вадим</h3>
       <p style="font-size:1rem; line-height:1.6; color:#555;">
         Эксперт по интеграции ККТ с торговыми системами.
       </p>
